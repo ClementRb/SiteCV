@@ -28,7 +28,12 @@ class BlogPostAdmin extends AbstractAdmin
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        // ... configure $listMapper
+        $listMapper
+            ->addIdentifier('title')
+            ->add('body')
+            ->add('category.name')
+
+        ;
     }
 
     public function toString($object)
