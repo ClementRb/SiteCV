@@ -16,7 +16,7 @@ Les éléments du cv ainsi que les blogs sont administrable via le role de super
 
 # Pour que le projet fonctionne il faut d'abord : 
 - Cloner le repo dans votre dossier `/www` 
-- Ensuite vous exporter le fichier projetsymfony.sql dans phpmyadmin cela vous créera la base de donnée avec les admins et les articles déjà à l'intérieur
+- Ensuite vous exporter le fichier  `projetsymfony.sql` dans phpmyadmin cela vous créera la base de donnée avec les admins et les articles déjà à l'intérieur
 - Installer [Composer](https://getcomposer.org/download/) si ce n'est pas déja fait
 - Avec un invite de commande rendez vous dans le dossier `/SiteCV` cloné à l'instant 
 - Effectuez la commande `composer install`
