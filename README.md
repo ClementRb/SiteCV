@@ -24,3 +24,13 @@ Les éléments du cv ainsi que les blogs sont administrable via le role de super
 - **Attention : lorsque composer vous demandera le nom de votre base de donnée veillez à bien lui donnez le nom exact de la base de donnée que vous avez importé avec phpmyadmin c'est à dire** `projetsymfony` 
 
 
+# Pour accéder à SonataAdmin
+
+Rajouter simplement `/admin/dashboard` a l'url
+
+Il faudra utiliser le login et mdp du `super_admin` qui sont : 
+- login : admin
+- mdp : password
+
+Tous les autres `user` ont pour mdp `password`
+
