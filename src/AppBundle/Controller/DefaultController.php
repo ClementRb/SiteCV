@@ -18,10 +18,20 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $AllParcours = $em->getRepository('AppBundle:Parcours')
-            ->findAll();
-        $AllExperience = $em->getRepository('AppBundle:Experience')
-            ->findAll();
+        $AllParcours = $em->createQueryBuilder()
+            ->select('p')
+            ->from('AppBundle:Parcours', 'p')
+            ->addOrderBy('p.anneedebut', 'ASC')
+            ->getQuery()
+            ->getResult();
+
+        $AllExperience = $em->createQueryBuilder()
+            ->select('e')
+            ->from('AppBundle:Experience', 'e')
+            ->addOrderBy('e.anneedebut', 'ASC')
+            ->getQuery()
+            ->getResult();
+
         $BlogAffichage = $em->createQueryBuilder()
             ->select('b')
             ->from('AppBundle:BlogPost', 'b')
