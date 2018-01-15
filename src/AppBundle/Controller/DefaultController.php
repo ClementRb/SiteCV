@@ -22,10 +22,22 @@ class DefaultController extends Controller
             ->findAll();
         $AllExperience = $em->getRepository('AppBundle:Experience')
             ->findAll();
+        $BlogAffichage = $em->createQueryBuilder()
+            ->select('b')
+            ->from('AppBundle:BlogPost', 'b')
+            ->addOrderBy('b.date', 'ASC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult();
+
+        $AllCompetence = $em->getRepository('AppBundle:Competence')
+            ->findAll();
 
         return $this->render('AppBundle:default:index.html.twig',[
             'AllParcours' => $AllParcours,
-            'AllExperience' => $AllExperience
+            'AllExperience' => $AllExperience,
+            'BlogAffichage' => $BlogAffichage,
+            'AllCompetence' => $AllCompetence
         ]);
     }
 
@@ -47,7 +59,7 @@ class DefaultController extends Controller
      */
     public function showBlog($id) {
         $blog = $this->getDoctrine()->getRepository('AppBundle:BlogPost')->find($id);
-        return $this->render('AppBundle:default:blog.html.twig', [
+        return $this->render('AppBundle:default:oneblog.html.twig', [
             'blog' => $blog
         ]);
     }

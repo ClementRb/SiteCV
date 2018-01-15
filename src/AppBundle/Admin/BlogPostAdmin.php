@@ -15,6 +15,8 @@ class BlogPostAdmin extends AbstractAdmin
             ->with('Content', ['class' => 'col-md-9'])
             ->add('title', 'text')
             ->add('body', 'textarea')
+            ->add('auteur', 'text')
+            ->add('date', 'datetime')
             ->end()
 
             ->with('Meta data', ['class' => 'col-md-3'])
@@ -31,7 +33,9 @@ class BlogPostAdmin extends AbstractAdmin
         $listMapper
             ->addIdentifier('title')
             ->add('body')
+            ->add('auteur')
             ->add('category.name')
+            ->add('date')
 
         ;
     }

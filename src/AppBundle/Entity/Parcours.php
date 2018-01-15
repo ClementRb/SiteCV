@@ -188,4 +188,3 @@ class Parcours
         return $this->anneefin;
     }
 }
-

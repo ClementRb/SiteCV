@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * BlogPost
  *
@@ -36,6 +37,20 @@ class BlogPost
     private $body;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="auteur", type="string", length=255)
+     */
+    private  $auteur;
+
+    /**
+     * @var \Date
+     *
+     * @ORM\Column(name="date", type="date")
+     */
+    private $date;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="draft", type="boolean")
@@ -46,6 +61,7 @@ class BlogPost
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="blogPosts")
      */
     private $category;
+
 
     public function setCategory(Category $category)
     {
@@ -117,6 +133,46 @@ class BlogPost
     }
 
     /**
+     * @return \Date
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \Date $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+
+
+    /**
+     * Set auteur
+     *
+     * @param string $auteur
+     *
+     * @return BlogPost
+     */
+    public function setAuteur($auteur)
+    {
+        $this->auteur = $auteur;
+    }
+
+    /**
+     * Get auteur
+     *
+     * @return string
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
      * Set draft
      *
      * @param boolean $draft
@@ -139,5 +195,6 @@ class BlogPost
     {
         return $this->draft;
     }
-}
 
+
+}

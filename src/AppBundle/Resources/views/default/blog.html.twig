@@ -1,3 +1,4 @@
+
 {% extends 'AppBundle::layout.html.twig' %}
 {% block body %}
 
@@ -29,130 +30,50 @@
 
 
 
-
     <!-- Blog Section -->
     <section id="blog" class="latest-blog-section section-padding">
         <div class="container">
-            <h2 class="section-title wow fadeInUp">Dernier Blog</h2>
+            <a href="{{ path('homepage') }}">Revenir au CV</a>
+            <h2 class="section-title wow fadeInUp">Blog</h2>
 
             <div class="row">
+                {% for BlogPost in AllBlog %}
                 <div class="col-sm-4">
                     <article class="blog-post-wrapper">
                         <div class="figure">
                             <div class="post-thumbnail">
-                                <a href="#"><img src="{{ asset('assets/images/blog/01.jpg') }}" class="img-responsive " alt=""></a>
+                                <a href="{{ path('show_blog', {'id': BlogPost.id}) }}"><img src="{{ asset('assets/images/blog/01.jpg') }}" class="img-responsive " alt=""></a>
                             </div>
                             <i class="fa fa-file-photo-o"></i>
                         </div><!-- /.figure -->
                         <header class="entry-header">
                             <div class="post-meta">
                   <span class="the-category">
-                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                    <p>{{ BlogPost.category.name }}</p>
                   </span>
                             </div>
-                            <h2 class="entry-title"><a href="#" rel="">Common fonts used for newspaper template design</a></h2>
+                            <h2 class="entry-title"><a href="#" rel="">{{ BlogPost.title }}</a></h2>
                             <hr>
                             <div class="entry-meta">
                                 <ul class="list-inline">
                                     <li>
                       <span class="the-author">
-                        <a href="#">Admin</a>
+                        <p>{{ BlogPost.auteur }}</p>
                       </span>
                                     </li>
                                     <li>
                       <span class="the-time">
-                        <a href="#">06 Jan 2015</a>
+                        <p>{{ BlogPost.date|date('Y-m-d') }}</p>
                       </span>
                                     </li>
-                                    <li>
-                      <span class="the-comments">
-                        <a href="#" title="">05</a>
-                      </span>
-                                    </li>
+
                                 </ul>
                             </div><!-- .entry-meta -->
                         </header><!-- .entry-header -->
                     </article>
                 </div><!-- /.col-sm-4 -->
-                <div class="col-sm-4">
-                    <article class="blog-post-wrapper">
-                        <div class="figure">
-                            <div class="post-thumbnail">
-                                <a href="#"><img src="{{ asset('assets/images/blog/02.jpg') }}" class="img-responsive " alt=""></a>
-                            </div>
-                            <i class="fa fa-file-video-o"></i>
-                        </div><!-- /.figure -->
-                        <header class="entry-header">
-                            <div class="post-meta">
-                  <span class="the-category">
-                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
-                  </span>
-                            </div>
-                            <h2 class="entry-title"><a href="#" rel="">What is the style of font called that is typically</a></h2>
-                            <hr>
-                            <div class="entry-meta">
-                                <ul class="list-inline">
-                                    <li>
-                      <span class="the-author">
-                        <a href="#">Admin</a>
-                      </span>
-                                    </li>
-                                    <li>
-                      <span class="the-time">
-                        <a href="#">06 Jan 2015</a>
-                      </span>
-                                    </li>
-                                    <li>
-                      <span class="the-comments">
-                        <a href="#" title="">05</a>
-                      </span>
-                                    </li>
-                                </ul>
-                            </div><!-- .entry-meta -->
-                        </header><!-- .entry-header -->
-                    </article>
-                </div><!-- /.col-sm-4 -->
-                <div class="col-sm-4">
-                    <article class="blog-post-wrapper">
-                        <div class="figure">
-                            <div class="post-thumbnail">
-                                <a href="#"><img src="{{ asset('assets/images/blog/03.jpg') }}" class="img-responsive " alt=""></a>
-                            </div>
-                            <i class="fa fa-quote-left"></i>
-                        </div><!-- /.figure -->
-                        <header class="entry-header">
-                            <div class="post-meta">
-                  <span class="the-category">
-                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
-                  </span>
-                            </div>
-                            <h2 class="entry-title"><a href="#" rel="">How to create a print ready brochure using photoshop</a></h2>
-                            <hr>
-                            <div class="entry-meta">
-                                <ul class="list-inline">
-                                    <li>
-                      <span class="the-author">
-                        <a href="#">Admin</a>
-                      </span>
-                                    </li>
-                                    <li>
-                      <span class="the-time">
-                        <a href="#">06 Jan 2015</a>
-                      </span>
-                                    </li>
-                                    <li>
-                      <span class="the-comments">
-                        <a href="#" title="">05</a>
-                      </span>
-                                    </li>
-                                </ul>
-                            </div><!-- .entry-meta -->
-                        </header><!-- .entry-header -->
-                    </article>
-                </div><!-- /.col-md-4 -->
-            </div><!-- /.row -->
-
-
+                {% endfor %}
+            </div><!--.row-->
         </div><!-- /.container -->
     </section><!-- End Blog Section -->
 

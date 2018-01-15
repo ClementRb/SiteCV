@@ -187,4 +187,3 @@ class Experience
         return $this->anneefin;
     }
 }
-

@@ -42,6 +42,14 @@ services:
             - { name: sonata.admin, manager_type: orm, label: Experience }
         public: true
 
+    admin.competence:
+        class: AppBundle\Admin\CompetenceAdmin
+        arguments: [~, AppBundle\Entity\Competence, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Competence }
+        public: true
+
+
 
 
     # makes classes in src/AppBundle available to be used as services

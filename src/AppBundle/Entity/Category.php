@@ -79,5 +79,28 @@ class Category
     {
         return $this->name;
     }
-}
 
+    /**
+     * Add blogPost
+     *
+     * @param \AppBundle\Entity\BlogPost $blogPost
+     *
+     * @return Category
+     */
+    public function addBlogPost(\AppBundle\Entity\BlogPost $blogPost)
+    {
+        $this->blogPosts[] = $blogPost;
+
+        return $this;
+    }
+
+    /**
+     * Remove blogPost
+     *
+     * @param \AppBundle\Entity\BlogPost $blogPost
+     */
+    public function removeBlogPost(\AppBundle\Entity\BlogPost $blogPost)
+    {
+        $this->blogPosts->removeElement($blogPost);
+    }
+}
