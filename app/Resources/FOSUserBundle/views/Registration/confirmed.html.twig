@@ -1,0 +1,9 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    <p><a href="{{ path('homepage') }}">Retour au CV</a></p>
+
+{% endblock fos_user_content %}

@@ -4,19 +4,30 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form action="{{ path("fos_user_security_check") }}" method="post">
-    {% if csrf_token %}
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-    {% endif %}
-
-    <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
-
-    <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" />
-
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-</form>
+<div class="row">
+    <div class="col s3 l3 m3"></div>
+    <div class="col s6 l6 m6">
+        <form action="{{ path("fos_user_security_check") }}" method="post" class="col s12">
+            <div class="row">
+                {% if csrf_token %}
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+                <div class="input-field col s6">
+                    <input class="validate" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+                    <label for="username">{{ 'security.login.username'|trans }}</label>
+                </div>
+                <div class="input-field col s6">
+                    <input class="validate" type="password" id="password" name="_password" required="required" />
+                    <label for="password">{{ 'security.login.password'|trans }}</label>
+                </div>
+                <div class="right">
+                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" class="btn waves-effect waves-light light-blue darken-4 " />
+                </div>
+                <a href="{{ path('blog') }}">Revenir en arrière</a>
+            </div>
+            <a href="{{ path('fos_user_registration_register') }}" class="right">Pas de compte ? Inscrivez vous</a>
+        </form>
+    </div>
+</div>

@@ -25,7 +25,7 @@ class DefaultController extends Controller
         $BlogAffichage = $em->createQueryBuilder()
             ->select('b')
             ->from('AppBundle:BlogPost', 'b')
-            ->addOrderBy('b.date', 'ASC')
+            ->addOrderBy('b.date', 'DESC')
             ->setMaxResults(3)
             ->getQuery()
             ->getResult();
