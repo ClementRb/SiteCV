@@ -20,6 +20,7 @@ Les éléments du cv ainsi que les blogs sont administrable via le role de super
 - Installer [Composer](https://getcomposer.org/download/) si ce n'est pas déja fait
 - Avec un invite de commande rendez vous dans le dossier `/SiteCV` cloné à l'instant 
 - Effectuez la commande `composer install`
-- Renseignez les valeur que Composer vous demande 
+- Renseignez les valeur que Composer vous demande et renseignez lui une adresse mail quand il vous le demandera
+- **Attention : lorsque composer vous demandera le nom de votre base de donnée veillez à bien lui donnez le nom exact de la base de donnée que vous avez importé avec phpmyadmin c'est à dire** `projetsymfony` 
 
 
