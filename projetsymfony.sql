@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 15 jan. 2018 à 15:13
+-- Généré le :  jeu. 18 jan. 2018 à 13:40
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `fos_user` (
 --
 
 INSERT INTO `fos_user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`) VALUES
-(1, 'admin', 'admin', 'clement.ribourt@gmail.com', 'clement.ribourt@gmail.com', 1, NULL, '$2y$13$kKth45oI1tcJco2V6dsumeJ9WkV3c5K.Sk8fS0VCKKWYsbXFg85qi', '2018-01-15 14:30:16', NULL, NULL, 'a:1:{i:0;s:16:\"ROLE_SUPER_ADMIN\";}'),
+(1, 'admin', 'admin', 'clement.ribourt@gmail.com', 'clement.ribourt@gmail.com', 1, NULL, '$2y$13$kKth45oI1tcJco2V6dsumeJ9WkV3c5K.Sk8fS0VCKKWYsbXFg85qi', '2018-01-18 13:38:54', NULL, NULL, 'a:1:{i:0;s:16:\"ROLE_SUPER_ADMIN\";}'),
 (2, 'clement', 'clement', 'clement@gmail.com', 'clement@gmail.com', 1, NULL, '$2y$13$4JJLgV.Plt03IzXP7EXJbOeSTJKsv441xulE4cfSfYMGuGv/oO8t2', '2018-01-15 13:51:39', NULL, NULL, 'a:0:{}'),
 (3, 'paul', 'paul', 'paul@gmail.com', 'paul@gmail.com', 1, NULL, '$2y$13$/.S4dFXEY.s13ofd7t4qKe42wGGYm0ARb.bWRQNml5gu45T/JHrHK', '2018-01-15 13:56:52', NULL, NULL, 'a:0:{}'),
 (4, 'pierre', 'pierre', 'pierre@gmail.com', 'pierre@gmail.com', 1, NULL, '$2y$13$SjGGF2zy/51s2/4f5JloY.Wz3R37F6AERAjdgEitA8HrqQDPiizhG', '2018-01-15 14:08:33', NULL, NULL, 'a:0:{}');
@@ -183,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `parcours` (
 INSERT INTO `parcours` (`id`, `name`, `ecole`, `texte`, `anneedebut`, `anneefin`) VALUES
 (1, 'Bac S', 'Lycée Pape Clément', 'Obtention du Bac S avec option Science de l\'Ingénieur', 2015, 2016),
 (2, 'Bachelor 1', 'Ingésup Campus Ynov Bordeaux', 'Première année dans le campus Ynos chez Ingésup pour l\'obtention d\'un Master expert informatique et systèmes d’information', 2016, 2017),
-(3, 'Bachelor 2', 'Ingésup Campus Ynov Bordeaux', 'Première année dans le campus Ynos chez Ingésup pour l\'obtention d\'un Master expert informatique et systèmes d’information', 2017, 2018);
+(3, 'Bachelor 2', 'Ingésup Campus Ynov Bordeaux', 'Deuxième année dans le campus Ynos chez Ingésup pour l\'obtention d\'un Master expert informatique et systèmes d’information', 2017, 2018);
 
 -- --------------------------------------------------------
 
