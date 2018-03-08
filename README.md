@@ -22,7 +22,7 @@ Les éléments du cv ainsi que les blogs sont administrable via le role de super
 - Effectuez la commande `composer install`
 - Renseignez les valeur que Composer vous demande et renseignez lui une adresse mail quand il vous le demandera
 - **Attention : lorsque composer vous demandera le nom de votre base de donnée veillez à bien lui donnez le nom exact de la base de donnée que vous avez importé avec phpmyadmin c'est à dire** `projetsymfony` 
-
+- Pour voir le site il faut entrer cette url : `/SiteCV/web/app_dev.php`
 
 # Pour accéder à SonataAdmin
 
